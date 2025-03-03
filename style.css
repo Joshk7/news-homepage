@@ -1,0 +1,43 @@
+
+:root {
+    /* typography */
+    --heading-xl: 800 3.5rem/1 "Inter";
+    --heading-l: bold 2.5rem/1 "Inter";
+    --heading-m: bold 2rem/1 "Inter";
+    --heading-s: 800 1.5rem/1.2 "Inter";
+    --heading-xs: 800 1.125rem/1.5rem "Inter";
+    --body: normal 0.9375rem/1.625rem "Inter";
+
+    /* colors */
+    --almost-white: #FFFDFA;
+    --dark-space-blue: #00001A;
+    --gunmetal: #5E607A;
+    --light-vermilion: #F15D51;
+    --silver: #C5C6CE;
+    --yellow: #E9AA52;
+}
+
+body {
+    font: var(--body);
+}
+
+
+footer {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+[hidden] {
+    display: none;
+}
