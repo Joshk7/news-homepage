@@ -1,10 +1,23 @@
-const navButton = document.querySelector("nav button");
-const menu = navButton.nextElementSibling;
+const openMenu = document.getElementById("open");
+const closeMenu = document.getElementById("close");
+const dialog = document.getElementById("dialog");
+const dialogLinks = dialog.querySelectorAll("a");
 
-const handleOpenMenu = (e) => {
-    let expanded = e.target.getAttribute('aria-expanded') === 'true' || false;
-    e.target.setAttribute('aria-expanded', !expanded);
-    menu.hidden = !menu.hidden;
+const handleOpen = (e) => {
+    dialog.showModal();
 }
 
-navButton.addEventListener("click", handleOpenMenu);
+const handleClose = (e) => {
+    dialog.close();
+}
+
+const handleLink = (e) => {
+    dialog.close();
+}
+
+openMenu.addEventListener("click", handleOpen);
+closeMenu.addEventListener("click", handleClose);
+
+dialogLinks.forEach((link) => {
+    link.addEventListener("click", handleLink);
+})
