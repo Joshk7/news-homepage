@@ -76,14 +76,35 @@ header {
     height: 1.75rem;
 }
 
-nav {
+.open {
+    height: 100%;
+    border: none;
+}
+
+.nav {
     display: flex;
     align-items: center;
 }
 
-.open {
-    height: 100%;
-    border: none;
+.nav__list {
+    display: none;
+}
+
+.nav__link {
+    font: var(--body);
+    color: var(--gunmetal);
+    text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--light-vermilion);
+    cursor: pointer;
+}
+
+.open:hover,
+.open:focus {
+    cursor: pointer;
 }
 
 main {
@@ -92,6 +113,11 @@ main {
     row-gap: 4rem;
     column-gap: 1.875rem;
     margin-block-end: 4rem;
+}
+
+.home__banner--image {
+    height: 100%;
+    object-fit: cover;
 }
 
 .home__header {
@@ -104,7 +130,6 @@ main {
 .home__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1.5rem;
 }
 
@@ -122,6 +147,12 @@ main {
     text-transform: uppercase;
     font: bold 0.875rem/1.5rem "Inter";
     letter-spacing: 0.25rem;
+}
+
+.home__link:hover,
+.home__link:focus {
+    background: var(--dark-space-blue);
+    color: var(--almost-white);
 }
 
 .new {
@@ -185,10 +216,6 @@ main {
     max-width: 100px;
 }
 
-.trending__content {
-
-}
-
 .trending__number {
     display: block;
     color: var(--light-vermilion);
@@ -202,6 +229,12 @@ main {
     text-decoration: none;
     color: var(--dark-space-blue);
     font: var(--heading-xs);
+}
+
+.trending__link:hover,
+.trending__link:focus {
+    color: var(--light-vermilion);
+    cursor: pointer;
 }
 
 .trending__description {
@@ -233,6 +266,11 @@ dialog::backdrop {
     margin-inline-start: auto;
     border: none;
     background: none;
+}
+
+.dialog__close:hover,
+.dialog__close:focus {
+    cursor: pointer;
 }
 
 .dialog__list {
@@ -283,8 +321,13 @@ footer {
 }
 
 @media screen and (min-width: 40rem) {
-    .home__banner {
-        grid-column: -1/1;
+    .open {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 2.5rem;
     }
 
     .home {
@@ -292,11 +335,21 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.875rem;
     }
+
+    .home__banner {
+        grid-column: -1/1;
+    }
+
+    .home__header {
+        margin: 0;
+        font: var(--heading-xl);
+    }
+
+    .new__header {
+        font: var(--heading-l);
+    }
+
 }
-
-/* @media screen and (min-width: 48rem) {
-
-} */
 
 @media screen and (min-width: 64rem) {
     .home {
@@ -313,9 +366,9 @@ footer {
 
     main {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-        "home home new"
-        "trending trending trending"
+        grid-template-areas:
+            "home home new"
+            "trending trending trending";
     }
 
     .trending__list {

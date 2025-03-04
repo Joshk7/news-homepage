@@ -23,7 +23,7 @@
     <body>
         <header>
             <img class="logo" src="/assets/images/logo.svg" alt="Logo" />
-            <nav id="navigation">
+            <nav class="nav" id="nav">
                 <button
                     id="open"
                     class="open"
@@ -32,13 +32,23 @@
                 >
                     <img src="/assets/images/icon-menu.svg" alt="Open Menu" />
                 </button>
-                <!-- <ul id="menu-list" hidden>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#new">New</a></li>
-                    <li><a href="#trending">Popular</a></li>
-                    <li><a href="#trending">Trending</a></li>
-                    <li><a href="#trending">Categories</a></li>
-                </ul> -->
+                <ul class="nav__list">
+                    <li class="nav__list--item">
+                        <a class="nav__link" href="#">Home</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a class="nav__link" href="#new">New</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a class="nav__link" href="#trending">Popular</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a class="nav__link" href="#trending">Trending</a>
+                    </li>
+                    <li class="nav__list--item">
+                        <a class="nav__link" href="#trending">Categories</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main>
@@ -49,6 +59,7 @@
                         media="(min-width: 40rem)"
                     />
                     <img
+                        class="home__banner--image"
                         src="/assets/images/image-web-3-mobile.jpg"
                         alt="Hero"
                     />
