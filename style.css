@@ -197,7 +197,7 @@ main {
 }
 
 .new__description {
-    color: var(silver);
+    color: var(--silver);
     font: var(--body);
 }
 
@@ -321,6 +321,10 @@ footer {
 }
 
 @media screen and (min-width: 40rem) {
+    .logo {
+        height: auto;
+    }
+
     .open {
         display: none;
     }
@@ -366,6 +370,7 @@ footer {
 
     main {
         grid-template-columns: repeat(3, 1fr);
+        row-gap: 4.5rem;
         grid-template-areas:
             "home home new"
             "trending trending trending";
@@ -373,5 +378,16 @@ footer {
 
     .trending__list {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    body {
+        padding: 0 10.25rem 8.125rem 10.25rem;
+    }
+
+    header {
+        margin-block-start: 5.625rem;
+        margin-block-end: 3.5rem;
     }
 }
