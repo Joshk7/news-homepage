@@ -51,10 +51,6 @@ h6 {
     --yellow: #e9aa52;
 }
 
-html {
-    background: var(--almost-white);
-}
-
 body {
     font: var(--body);
     padding: 1rem;
